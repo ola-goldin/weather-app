@@ -1,0 +1,12 @@
+@media only screen and (min-width: 780px) {
+   ::ng-deep .grid {
+    display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+        column-gap: 10px;
+        row-gap: 1em;
+    }
+    
+   ::ng-deep .p-component:first-child{
+   // height: 460px;
+   }
+}

@@ -1,0 +1,35 @@
+.grid{
+   // display: flex;
+   // justify-content: space-between;
+   // flex-wrap: wrap;
+   // flex-direction: column-reverse;
+}
+.child{
+    margin: 1rem;
+}
+
+@media only screen and (min-width: 668px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+        column-gap: 10px;
+        row-gap: 1em;
+        grid-column-end: 1;
+     
+    }
+    
+    .child {
+      grid-row: span 2;
+      margin: 5px
+    }
+    ::ng-deep .p-dialog{
+        width: 40% !important;
+      }
+}
+
+
+@media only screen and (max-width: 667px) {
+   ::ng-deep .p-dialog{
+      width: 100% !important;
+    }
+
+}

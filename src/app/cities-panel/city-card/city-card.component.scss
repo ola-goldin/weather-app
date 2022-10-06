@@ -1,0 +1,29 @@
+img{
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    height: 150px;
+}
+::ng-deep .p-inputtext {
+    width: 320px;
+}
+::ng-deep .p-autocomplete{
+    margin-bottom: 1rem;
+}
+::ng-deep .p-card-footer{
+    display: flex;
+    justify-content: center;
+}
+
+::ng-deep .p-button{
+    background-color: orange;
+    border-color: orange;
+    border-radius: 30px;
+}
+
+::ng-deep.p-button:enabled:hover {
+    background: gray;
+    border-color: gray;
+}
+::ng-deep .p-card-content{
+    padding: 0 !important;
+}

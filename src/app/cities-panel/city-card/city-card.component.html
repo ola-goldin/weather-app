@@ -1,0 +1,13 @@
+
+<p-card header="{{city?.name}}" subheader="{{city?.time}}" [style]="{width: '320px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="https://source.unsplash.com/random/50×50/?city">
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <p-button (click)="showDialog();" class="p-button-warning" label="View Forecast" icon="pi pi-sun"></p-button>
+    </ng-template>
+</p-card>
+
+
+

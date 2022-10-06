@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  cities: "https://api.teleport.org/api/cities?search=",
+  forecats: "http://api.openweathermap.org/data/2.5/forecast",
+  apiKey:"7e11abb58923d084d9e6a9271eed029e"
 };
 
 /*

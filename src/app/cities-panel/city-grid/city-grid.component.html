@@ -1,0 +1,13 @@
+<div class="container">
+    <p-card  header="Search Cities" >
+        <p-autoComplete [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
+       <div class="grid">
+        <div class="grid-item" *ngFor="let city of cities">
+            <app-city-card [city]="city"></app-city-card>
+           </div>
+       </div>
+      
+    </p-card>
+    
+</div>
+

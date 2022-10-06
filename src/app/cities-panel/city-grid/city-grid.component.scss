@@ -1,0 +1,14 @@
+.grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.grid-item{
+    margin-bottom: 2rem;
+}
+.container{
+    .p-card .p-component{
+        background-color: #FAFAFA !important;
+    }
+
+}
