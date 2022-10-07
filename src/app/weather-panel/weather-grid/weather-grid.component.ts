@@ -24,11 +24,22 @@ export class WeatherGridComponent implements OnInit {
   showForecast() {
     const url = `${environment.forecats}?lat=${this.city?.latitude}&lon=${this.city?.longitude}&appid=${environment.apiKey}`;
     this.dataService.getData(url).subscribe(res => {
-      this.weatherlist = res.list.slice(0, 8).map((x: any) => {
-        return { time: this.dateFormat(x.dt_txt), weather: x.weather[0].main, icon: x.weather[0].icon, temperature: Number(x.main.temp / 10).toFixed(0) }
+      const groups = res.list.reduce((groups:any, day:any) => {
+        const date = day.dt_txt.split(' ')[0];
+        if (!groups[date]) {
+          groups[date] = [];
+        }
+        groups[date].push(day);
+        return groups;
+      }, {});
+ 
+     this.weatherlist = Object.values(groups).map((x: any) => {
+        const first = x[0];
+        return { time: this.dateFormat(first.dt_txt), weather: first.weather[0].main, icon: first.weather[0].icon, temperature: Number(first.main.temp / 10).toFixed(0) }
       })
     })
   }
+
 
   private dateFormat(date: string) {
     const mydate = new Date(date);
